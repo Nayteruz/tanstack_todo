@@ -80,18 +80,21 @@ export const todoListApi = {
       select: result => result.pages.flatMap(page => page.data)
     });
   },
+
   createTodo: (data: ITodoDto) => {
     return jsonApiInstance<ITodoDto>(`/tasks`, {
       method: "POST",
       json: data
     });
   },
-  updateTodo: (id: string, data: Partial<ITodoDto>) => {
-    return jsonApiInstance<ITodoDto>(`/tasks/${id}`, {
+
+  updateTodo: (data: Partial<ITodoDto> & { id: string }) => {
+    return jsonApiInstance<ITodoDto>(`/tasks/${data.id}`, {
       method: "PATCH",
       json: data
     });
   },
+
   deleteTodo: (id: string) => {
     return jsonApiInstance(`/tasks/${id}`, {
       method: "DELETE"

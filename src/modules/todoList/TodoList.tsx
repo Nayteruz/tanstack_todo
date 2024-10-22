@@ -1,19 +1,22 @@
 // import { useInfiniteQuery } from "@tanstack/react-query";
 // import { todoListApi } from "./api";
-import { useState } from "react";
 // import { useIntersection } from "../../shared/hooks/useIntersection";
-import { useTodoList } from "./useTodoList";
 // import { ITodoDto, todoListApi } from "./api";
 // import { useMutation } from "@tanstack/react-query";
 // import { nanoid } from "nanoid";
+import { useTodoList } from "./useTodoList";
 import { useCreateTodo } from "./useCreateTodo";
+import { useDeleteTodo } from "./useDeleteTodo";
+import { useToggleTodo } from "./useToggleTodo";
+import { LogoutBtn } from "../auth/LogoutBtn";
 
 export const TodoList = () => {
   const { tasks, error, isLoading } = useTodoList();
   const createTodo = useCreateTodo();
+  const deleteTodo = useDeleteTodo();
+  const { toggleTodo } = useToggleTodo();
   // const { getTasks } = todoListApi;
   // const [page, setPage] = useState(1);
-  const [enabled, setEnabled] = useState(false);
 
   // const { data: tasks, error, isPlaceholderData, isLoading } = useQuery({
   //   queryKey: ["tasks", "list", { page }],
@@ -62,7 +65,10 @@ export const TodoList = () => {
 
   return (
     <div className="p-5 mx-auto max-w[1200px] mt-10">
-      <h2 className="text-3xl font-bold mb-3">Todo list</h2>
+      <div className="flex justify-between items-start">
+        <h2 className="text-3xl font-bold mb-3">Todo list</h2>
+        <LogoutBtn />
+      </div>
       <form
         onSubmit={createTodo.onCreate}
         className="flex flex-col gap-3 mb-10"
@@ -80,20 +86,26 @@ export const TodoList = () => {
           Добавить
         </button>
       </form>
-      <button
-        className="p-3 min-w-[100px] mb-5 rounded border border-teal-800 "
-        onClick={() => setEnabled(!enabled)}
-      >
-        Enabled
-      </button>
       {isLoading && <div>Загрузка...</div>}
       <div className={`flex flex-col gap-4`}>
         {tasks?.map(task => (
           <div
-            className="border border-slate-300 rounded-lg p-2 hover:border-slate-950"
+            className="flex gap-3 justify-between items-center border border-slate-300 rounded-lg p-2 hover:border-slate-950"
             key={task.id}
           >
-            {task.title}
+            <input
+              type="checkbox"
+              checked={task.done}
+              onChange={() => toggleTodo(task.id, task.done)}
+            />
+            <span className="mr-auto">{task.title}</span>
+            <button
+              disabled={deleteTodo.getIsPending(task.id)}
+              className="text-rose-500 text-bold disabled:text-rose-100"
+              onClick={() => deleteTodo.onDelete(task.id)}
+            >
+              Удалить
+            </button>
           </div>
         ))}
       </div>

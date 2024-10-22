@@ -1,11 +1,27 @@
 {
-  "tasks": [
+  "users": [
     {
       "id": "1",
-      "title": "Random title text 1",
-      "done": false,
-      "userId": "101"
+      "login": "login1",
+      "password": "123"
     },
+    {
+      "id": "2",
+      "login": "login2",
+      "password": "123"
+    },
+    {
+      "id": "3",
+      "login": "login3",
+      "password": "123"
+    },
+    {
+      "id": "4",
+      "login": "login4",
+      "password": "123"
+    }
+  ],
+  "tasks": [
     {
       "id": "2",
       "title": "Another random title",
@@ -133,22 +149,10 @@
       "userId": "122"
     },
     {
-      "id": "23",
-      "title": "Task 23 with title",
-      "done": false,
-      "userId": "123"
-    },
-    {
       "id": "24",
       "title": "Twenty-fourth randomize",
       "done": true,
       "userId": "124"
-    },
-    {
-      "id": "25",
-      "title": "Task 25 example text",
-      "done": false,
-      "userId": "125"
     },
     {
       "id": "26",
@@ -157,206 +161,20 @@
       "userId": "126"
     },
     {
-      "id": "27",
-      "title": "Random task text 27",
-      "done": false,
-      "userId": "127"
-    },
-    {
-      "id": "28",
-      "title": "Task 28 random words",
-      "done": true,
-      "userId": "128"
-    },
-    {
-      "id": "29",
-      "title": "Title text for task 29",
-      "done": false,
-      "userId": "129"
-    },
-    {
-      "id": "30",
-      "title": "Random task 30 text",
-      "done": true,
-      "userId": "130"
-    },
-    {
-      "id": "31",
-      "title": "Thirty-first task here",
-      "done": false,
-      "userId": "131"
-    },
-    {
-      "id": "32",
-      "title": "Task with text 32",
-      "done": true,
-      "userId": "132"
-    },
-    {
       "id": "33",
       "title": "Task 33 title example",
-      "done": false,
+      "done": true,
       "userId": "133"
     },
     {
-      "id": "34",
-      "title": "Random title 34",
-      "done": true,
-      "userId": "134"
-    },
-    {
-      "id": "35",
-      "title": "Task 35 random text",
-      "done": false,
-      "userId": "135"
-    },
-    {
-      "id": "36",
-      "title": "Title task 36",
-      "done": true,
-      "userId": "136"
-    },
-    {
-      "id": "37",
-      "title": "Randomized title 37",
-      "done": false,
-      "userId": "137"
-    },
-    {
-      "id": "38",
-      "title": "Task 38 example here",
-      "done": true,
-      "userId": "138"
-    },
-    {
-      "id": "39",
-      "title": "Thirty-ninth task",
-      "done": false,
-      "userId": "139"
-    },
-    {
-      "id": "40",
-      "title": "Fortieth task title",
-      "done": true,
-      "userId": "140"
-    },
-    {
-      "id": "41",
-      "title": "Task 41 title text",
-      "done": false,
-      "userId": "141"
-    },
-    {
-      "id": "42",
-      "title": "Forty-second random task",
-      "done": true,
-      "userId": "142"
-    },
-    {
-      "id": "43",
-      "title": "Title for task 43",
-      "done": false,
-      "userId": "143"
-    },
-    {
-      "id": "44",
-      "title": "Random title 44",
-      "done": true,
-      "userId": "144"
-    },
-    {
-      "id": "45",
-      "title": "Task 45 random text",
-      "done": false,
-      "userId": "145"
-    },
-    {
-      "id": "46",
-      "title": "Title task for 46",
-      "done": true,
-      "userId": "146"
-    },
-    {
-      "id": "47",
-      "title": "Seventh random task",
-      "done": false,
-      "userId": "147"
-    },
-    {
-      "id": "48",
-      "title": "Task 48 example title",
-      "done": true,
-      "userId": "148"
-    },
-    {
-      "id": "49",
-      "title": "Task 49 title text",
-      "done": false,
-      "userId": "149"
-    },
-    {
-      "id": "50",
-      "title": "Final task 50 title",
-      "done": true,
-      "userId": "150"
-    },
-    {
-      "id": "P3qua-gL50Y8mrL1VK6iQ",
-      "title": "test data",
+      "id": "pqkMGoz9tqQDx3jcPZiTD",
+      "title": "test",
       "done": false,
       "userId": "1"
     },
     {
-      "id": "QLyAQlvUtM2P4fstSM62d",
-      "title": "new test data",
-      "done": false,
-      "userId": "1"
-    },
-    {
-      "id": "lZiakeFh5hxXsFfTVzetr",
-      "title": "www",
-      "done": false,
-      "userId": "1"
-    },
-    {
-      "id": "7_q9_Et7L_2cBAJUSCzyk",
-      "title": "add base key",
-      "done": false,
-      "userId": "1"
-    },
-    {
-      "id": "Dz5fXSFdhObuAFDHWxQHp",
-      "title": "addd",
-      "done": false,
-      "userId": "1"
-    },
-    {
-      "id": "aoIu7mAGjPO7GKnwCksMZ",
-      "title": "aaaa",
-      "done": false,
-      "userId": "1"
-    },
-    {
-      "id": "La_UqajSXDtO7E9kvd6qg",
-      "title": "eeee",
-      "done": false,
-      "userId": "1"
-    },
-    {
-      "id": "y_r72wZKdrOTrFaTJaAaW",
-      "title": "dfdfd",
-      "done": false,
-      "userId": "1"
-    },
-    {
-      "id": "B0ui7H0_1eX-17quS8KCI",
-      "title": "rrrr",
-      "done": false,
-      "userId": "1"
-    },
-    {
-      "id": "0fsyWPSeMaGOq50W2K2Cz",
-      "title": "uuu",
+      "id": "BpNec9koPAJjv5UTrnARW",
+      "title": "test3",
       "done": false,
       "userId": "1"
     }
